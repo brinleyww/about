@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bryan | AI Enthusiast & Developer</title>
+    <!-- Tailwind CSS for sleek, modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans:['Inter', 'sans-serif'] },
+                    colors: {
+                        primary: '#3b82f6', // Bright Blue Accent
+                        background: '#020617', // Slate 950
+                        card: '#0f172a', // Slate 900
+                        borderDark: '#1e293b' // Slate 800
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #020617; color: #f8fafc; }
+        .glass-nav { 
+            background: rgba(2, 6, 23, 0.7); 
+            backdrop-filter: blur(12px); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+        }
+        .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+        .card-hover:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.3); 
+            border-color: rgba(59, 130, 246, 0.5); 
+        }
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s step-start infinite;
+            color: #3b82f6;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+        /* Hide scrollbar for a cleaner look */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #334155; }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-bold tracking-tight">Bryan<span class="text-primary">.</span></a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+                <a href="#home" class="hover:text-white transition-colors">Home</a>
+                <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+            <a href="https://github.com/brinleyww" target="_blank" class="text-gray-400 hover:text-white transition-colors text-xl">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="max-w-6xl mx-auto px-6 w-full">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/20 border border-blue-800/40 text-blue-400 text-sm mb-6">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                14 yo Developer & AI Enthusiast
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">
+                Hi there, I'm Bryan.
+            </h1>
+            
+            <h2 class="text-2xl md:text-4xl font-semibold text-gray-400 h-10 md:h-12 mb-6">
+                <span class="typing-text typing-cursor"></span>
+            </h2>
+            
+            <p class="text-lg md:text-xl text-gray-400 max-w-2xl leading-relaxed mb-10">
+                I build scalable AI applications, discord integrations, and fun incremental games. 
+                Passionate about robotics, system design, and learning new things every day.
+            </p>
+            
+            <div class="flex flex-wrap gap-4">
+                <a href="#projects" class="px-6 py-3 bg-primary hover:bg-blue-600 text-white rounded-lg font-medium transition-all shadow-[0_0_15px_rgba(59,130,246,0.4)]">
+                    View My Work
+                </a>
+                <a href="#contact" class="px-6 py-3 bg-card hover:bg-borderDark border border-borderDark rounded-lg font-medium text-white transition-all">
+                    Get in touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 border-t border-borderDark/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Tech Stack</h2>
+                <p class="text-gray-400">The languages, frameworks, and tools in my arsenal.</p>
+            </div>
+            
+            <!-- Adjusted the grid columns to better fit 7 items -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Skill Cards -->
+                <div class="bg-card border border-borderDark rounded-xl p-4 flex flex-col items-center justify-center gap-3 card-hover">
+                    <i class="fa-brands fa-python text-4xl text-[#3776AB]"></i>
+                    <span class="font-medium text-sm">Python</span>
+                </div>
+                <div class="bg-card border border-borderDark rounded-xl p-4 flex flex-col items-center justify-center gap-3 card-hover">
+                    <i class="fa-brands fa-js text-4xl text-[#F7DF1E]"></i>
+                    <span class="font-medium text-sm">JavaScript</span>
+                </div>
+                <div class="bg-card border border-borderDark rounded-xl p-4 flex flex-col items-center justify-center gap-3 card-hover">
+                    <i class="fa-brands fa-java text-4xl text-[#007396]"></i>
+                    <span class="font-medium text-sm">Java</span>
+                </div>
+                <div class="bg-card border border-borderDark rounded-xl p-4 flex flex-col items-center justify-center gap-3 card-hover">
+                    <strong class="text-4xl text-[#00599C]">C++</strong>
+                    <span class="font-medium text-sm">C++</span>
+                </div>
+                <div class="bg-card border border-borderDark rounded-xl p-4 flex flex-col items-center justify-center gap-3 card-hover">
+                    <i class="fa-brands fa-node-js text-4xl text-[#339933]"></i>
+                    <span class="font-medium text-sm">Node.js</span>
+                </div>
+                <div class="bg-card border border-borderDark rounded-xl p-4 flex flex-col items-center justify-center gap-3 card-hover">
+                    <i class="fa-brands fa-git-alt text-4xl text-[#F05033]"></i>
+                    <span class="font-medium text-sm">Git</span>
+                </div>
+                <div class="bg-card border border-borderDark rounded-xl p-4 flex flex-col items-center justify-center gap-3 card-hover">
+                    <i class="fa-brands fa-discord text-4xl text-[#5865F2]"></i>
+                    <span class="font-medium text-sm">Discord</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 border-t border-borderDark/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Experience</h2>
+                <p class="text-gray-400">Leading technical development and teams.</p>
+            </div>
+
+            <div class="relative border-l border-borderDark ml-3 md:ml-4 space-y-12">
+                <!-- FTC Role -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute w-4 h-4 bg-primary rounded-full -left-[8.5px] top-1.5 shadow-[0_0_10px_rgba(59,130,246,0.8)]"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-2xl font-bold">President</h3>
+                        <span class="text-primary font-medium mt-1 md:mt-0">Present</span>
+                    </div>
+                    <h4 class="text-xl text-gray-300 mb-4">FTC Team 32132</h4>
+                    <p class="text-gray-400 mb-4">
+                        Leading a competitive First Tech Challenge robotics team. Overseeing engineering, programming, and design processes to build advanced robotic systems. Managing community outreach and technical infrastructure.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-borderDark/50 border border-borderDark rounded-md text-xs text-gray-300">Robotics</span>
+                        <span class="px-3 py-1 bg-borderDark/50 border border-borderDark rounded-md text-xs text-gray-300">Leadership</span>
+                        <span class="px-3 py-1 bg-borderDark/50 border border-borderDark rounded-md text-xs text-gray-300">Java</span>
+                        <span class="px-3 py-1 bg-borderDark/50 border border-borderDark rounded-md text-xs text-gray-300">C++</span>
+                    </div>
+                    <a href="https://www.instagram.com/microwave32132/" target="_blank" class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
+                        <i class="fa-brands fa-instagram text-[#E1306C]"></i> 
+                        <strong>500k+ Total Views</strong> - @microwave32132
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Achievements Section -->
+    <section class="py-24 border-t border-borderDark/50 bg-[#060b1b]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Achievements & Awards</h2>
+                <p class="text-gray-400">Competitive mathematics and academic recognitions.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                
+                <!-- Award 1 -->
+                <div class="bg-card border border-borderDark rounded-xl p-5 card-hover flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-500 flex-shrink-0">
+                        <i class="fa-solid fa-trophy text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-white">1st Place Individual</h3>
+                        <p class="text-sm text-gray-400">Stanford Math Tournament (SMT) 2026</p>
+                    </div>
+                </div>
+
+                <!-- Award 2 -->
+                <div class="bg-card border border-borderDark rounded-xl p-5 card-hover flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                        <i class="fa-solid fa-medal text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-white">2x Qualifier</h3>
+                        <p class="text-sm text-gray-400">American Invitational Mathematics Examination (AIME)</p>
+                    </div>
+                </div>
+
+                <!-- Award 3 -->
+                <div class="bg-card border border-borderDark rounded-xl p-5 card-hover flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-500 flex-shrink-0">
+                        <i class="fa-solid fa-users text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-white">11th Place Team</h3>
+                        <p class="text-sm text-gray-400">Berkeley Mini Math Tournament (BMMT)</p>
+                    </div>
+                </div>
+
+                <!-- Award 4 -->
+                <div class="bg-card border border-borderDark rounded-xl p-5 card-hover flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 flex-shrink-0">
+                        <i class="fa-solid fa-star text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-white">Distinguished Honor Roll</h3>
+                        <p class="text-sm text-gray-400">AMC 10 (American Mathematics Competitions)</p>
+                    </div>
+                </div>
+
+                <!-- Award 5 -->
+                <div class="bg-card border border-borderDark rounded-xl p-5 card-hover flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 flex-shrink-0">
+                        <i class="fa-solid fa-star text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-white">Distinguished Honor Roll</h3>
+                        <p class="text-sm text-gray-400">AMC 8 (American Mathematics Competitions)</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 border-t border-borderDark/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Work</h2>
+                <p class="text-gray-400">Selected projects and ongoing developments.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Apex Horizons -->
+                <div class="bg-card border border-borderDark rounded-xl p-6 card-hover flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-2 py-1 bg-primary/20 text-primary text-xs font-bold rounded">IN DEVELOPMENT</span>
+                        <i class="fa-solid fa-gamepad text-gray-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Apex Horizons</h3>
+                    <p class="text-gray-400 mb-6 flex-grow">
+                        An upcoming innovative game project blending engaging mechanics with smooth gameplay systems. Currently focusing on building the core engine and logic.
+                    </p>
+                    <div class="flex gap-2 mt-auto">
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">Game Dev</span>
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">C++ / Engine</span>
+                    </div>
+                </div>
+
+                <!-- AI Trader -->
+                <div class="bg-card border border-borderDark rounded-xl p-6 card-hover flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-2 py-1 bg-primary/20 text-primary text-xs font-bold rounded">CURRENT PROJECT</span>
+                        <i class="fa-solid fa-chart-line text-gray-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">AI Trader</h3>
+                    <p class="text-gray-400 mb-6 flex-grow">
+                        An algorithmic trading integration powered by Machine Learning. Analyzes market trends to execute smart trades and provide actionable data insights.
+                    </p>
+                    <div class="flex gap-2 mt-auto flex-wrap">
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">Python</span>
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">Machine Learning</span>
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">Pandas</span>
+                    </div>
+                </div>
+
+                <!-- Discord AI Integrations -->
+                <div class="bg-card border border-borderDark rounded-xl p-6 card-hover flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-2 py-1 bg-borderDark text-gray-300 text-xs font-bold rounded">DEPLOYED</span>
+                        <i class="fa-brands fa-discord text-gray-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Discord AI Integrations</h3>
+                    <p class="text-gray-400 mb-6 flex-grow">
+                        Advanced discord applications integrating Claude Code, Gemini, and DeepSeek. Features context-aware chatbot capabilities, automated moderation, and utility systems.
+                    </p>
+                    <div class="flex gap-2 mt-auto flex-wrap">
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">Python</span>
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">Claude Code</span>
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">Gemini</span>
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">DeepSeek</span>
+                    </div>
+                </div>
+
+                <!-- Incremental Games -->
+                <div class="bg-card border border-borderDark rounded-xl p-6 card-hover flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-2 py-1 bg-borderDark text-gray-300 text-xs font-bold rounded">HOBBY</span>
+                        <i class="fa-solid fa-mouse-pointer text-gray-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Incremental Games</h3>
+                    <p class="text-gray-400 mb-6 flex-grow">
+                        A collection of fun, web-based incremental/clicker games exploring deep mathematical progression systems and addicting UI/UX loops.
+                    </p>
+                    <div class="flex gap-2 mt-auto">
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">JavaScript</span>
+                        <span class="text-xs text-gray-500 border border-gray-700 rounded px-2 py-1">HTML/CSS</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- GitHub Stats Embeds -->
+            <div class="mt-12 flex flex-col md:flex-row items-center justify-center gap-6">
+                <a href="https://github.com/brinleyww" target="_blank" class="w-full md:w-auto">
+                    <img src="https://github-readme-streak-stats.herokuapp.com/?user=brinleyww&theme=react&hide_border=true&background=0f172a" alt="GitHub Streak" class="rounded-xl w-full">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <section id="contact" class="py-24 border-t border-borderDark/50 bg-card">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Get in Touch</h2>
+            <p class="text-gray-400 mb-10 text-lg">
+                Whether you want to discuss robotics, AI, or just say hi, my inbox is always open.
+            </p>
+            
+            <div class="flex justify-center gap-8 mb-16">
+                <a href="mailto:brinleyww@gmail.com" class="flex flex-col items-center gap-2 group">
+                    <div class="w-14 h-14 bg-background border border-borderDark rounded-full flex items-center justify-center group-hover:border-blue-400 group-hover:text-blue-400 transition-all">
+                        <i class="fa-solid fa-envelope text-2xl"></i>
+                    </div>
+                    <span class="text-sm text-gray-400 group-hover:text-white">Email</span>
+                </a>
+                <a href="https://github.com/brinleyww" target="_blank" class="flex flex-col items-center gap-2 group">
+                    <div class="w-14 h-14 bg-background border border-borderDark rounded-full flex items-center justify-center group-hover:border-primary group-hover:text-primary transition-all">
+                        <i class="fa-brands fa-github text-2xl"></i>
+                    </div>
+                    <span class="text-sm text-gray-400 group-hover:text-white">GitHub</span>
+                </a>
+                <a href="https://www.instagram.com/microwave32132/" target="_blank" class="flex flex-col items-center gap-2 group">
+                    <div class="w-14 h-14 bg-background border border-borderDark rounded-full flex items-center justify-center group-hover:border-pink-500 group-hover:text-pink-500 transition-all">
+                        <i class="fa-brands fa-instagram text-2xl"></i>
+                    </div>
+                    <span class="text-sm text-gray-400 group-hover:text-white">Instagram</span>
+                </a>
+            </div>
+            
+            <p class="text-gray-500 text-sm">
+                &copy; <script>document.write(new Date().getFullYear())</script> Bryan. Built with passion.
+            </p>
+        </div>
+    </section>
+
+    <!-- Script for Typing Animation -->
+    <script>
+        const textArray =[
+            "I build AI Integrations.", 
+            "I develop Incremental Games.", 
+            "I lead FTC Team 32132.", 
+            "I train Machine Learning Models."
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        
+        const typingDelay = 80;
+        const erasingDelay = 40;
+        const newTextDelay = 2000;
+        
+        function type() {
+            const currentText = textArray[textIndex];
+            const typingElement = document.querySelector('.typing-text');
+            
+            if (isDeleting) {
+                typingElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            let typeSpeed = isDeleting ? erasingDelay : typingDelay;
+            
+            if (!isDeleting && charIndex === currentText.length) {
+                typeSpeed = newTextDelay;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex++;
+                if (textIndex >= textArray.length) textIndex = 0;
+            }
+            
+            setTimeout(type, typeSpeed);
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            if (textArray.length) setTimeout(type, 1000);
+        });
+    </script>
+</body>
+</html>
